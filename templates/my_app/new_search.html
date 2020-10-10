@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 style="text-align: center; color: orange">{{search | title}}</h2>
+
+    <div class="row">
+        {% for post in final_postings %}
+            <!-- <p>{{ post.0 }}</p>
+            <p>{{ post.1 }}</p>
+            <p>{{ post.2 }}</p> -->
+            
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <a href="{{ post.1 }}"><img src="{{ post.3 }}" alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.0 }}</p>
+                    </div> 
+                    <div class="card-action">
+                        <a href="{{ post.1 }}">view listing: Price {{ post.2 }}</a>
+                    </div>
+                </div>
+            </div>
+        
+        {% endfor %}
+    </div>
+
+    <!-- <div class="row">
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <a href="/"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*" alt=""></a>
+                </div>
+                <div class="card-content">
+                    <p>Test</p>
+                </div> 
+                <div class="card-action">
+                    <a href="/">view listing: price test project</a>
+                </div>
+            </div>
+        </div> -->
+        <!-- 2
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <a href=""><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*"></a>
+                </div>
+                <div class="card-content">
+                    <p>Test</p>
+                </div>
+                <div class="card-action">
+                    <a href="/">view listing: price test project</a>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <!-- <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <a href="/"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*"></a>
+                </div>
+                <div class="card-content">
+                    <p>Test</p>
+                </div>
+                <div class="card-action">
+                    <a href="/">view listing: price test project</a>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+    <!-- </div> -->
+
+{% endblock content %}
